@@ -5,9 +5,9 @@ const surnames = ["Rossi", "Verdi", "Brambilla", "Magnani"];
 let outputList = [];
 for (let i = 0; i < 3; i++) {
     // 2. Get random name
-    let randomName = names[Math.ceil(Math.random() * names.length - 1)];
+    let randomName = names[Math.floor(Math.random() * names.length)];
     // 3. Get random surname
-    let randomSurname = surnames[Math.ceil(Math.random() * surnames.length - 1)];
+    let randomSurname = surnames[Math.floor(Math.random() * surnames.length)];
     // 4. Add joined strings in output array
     outputList.push(`${randomName} ${randomSurname}`);
 }
