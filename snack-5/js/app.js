@@ -1,8 +1,17 @@
+// 0. Function for random arrays
+const randomArray = () => {
+    let array = [];
+    for (let i = 0; Math.floor(Math.random() * 100); i++) {
+        array.push(Math.floor(Math.random() * 100));
+    }
+    return array;
+}
+
 // 1. create 2 array with different length
-let array1 = [1, 2, 3, 4];
-console.log("array1 = " + array1)
-let array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-console.log("array2 = " + array2)
+let array1 = randomArray();
+console.log("array1.lenght = " + array1.length);
+let array2 = randomArray();
+console.log("array2.length = " + array2.length);
 
 // 2. add random element to the shorter array till it matches the longer one
 const matchingArrays = (array1, array2) => {
