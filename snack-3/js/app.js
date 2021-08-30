@@ -2,12 +2,12 @@
 const names = ["Paolo", "Luigi", "Gabriele", "Edoardo"];
 const surnames = ["Rossi", "Verdi", "Brambilla", "Magnani"];
 
-const getRandomNames = () => {
+const getRandomNames = (namesArray, surnamesArray) => {
     // 1. Create output array
     let outputList = [];
     // 1.1 create differents array with same values, to avoid repetition
-    let namesCopy = [...names];
-    let surnamesCopy = [...surnames];
+    let namesCopy = [...namesArray];
+    let surnamesCopy = [...surnamesArray];
     for (let i = 0; i < 3; i++) {
         // 2. Get random name and remove it from the list
         let randomNameIndex = Math.floor(Math.random() * namesCopy.length);
@@ -24,4 +24,4 @@ const getRandomNames = () => {
     }
     console.log(outputList);
 }
-getRandomNames();
+getRandomNames(names, surnames);
